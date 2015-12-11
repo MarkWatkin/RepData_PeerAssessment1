@@ -41,7 +41,7 @@ with (dailySteps, {
 ```
 
 <!-- html table generated in R 3.2.2 by xtable 1.8-0 package -->
-<!-- Fri Dec 11 14:48:32 2015 -->
+<!-- Fri Dec 11 15:30:54 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> date </th> <th> steps </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> 2012-10-02 </td> <td align="right"> 126 </td> </tr>
@@ -98,7 +98,7 @@ with (dailySteps, {
   <tr> <td align="right"> 52 </td> <td> 2012-11-28 </td> <td align="right"> 10183 </td> </tr>
   <tr> <td align="right"> 53 </td> <td> 2012-11-29 </td> <td align="right"> 7047 </td> </tr>
    </table>
-<img src="figure/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" width="750px" />
+<img src="figure/totalStepsPerDay-1.png" title="plot of chunk totalStepsPerDay" alt="plot of chunk totalStepsPerDay" width="750px" />
 
 ### Make a histogram of the total number of steps taken each day
 
@@ -107,7 +107,7 @@ with (dailySteps, {
 hist(dailySteps$steps,xlab="Daily Steps", main="Histogram of Total Daily Steps")
 ```
 
-<img src="figure/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" width="750px" />
+<img src="figure/totalStepsPerDayHistogram-1.png" title="plot of chunk totalStepsPerDayHistogram" alt="plot of chunk totalStepsPerDayHistogram" width="750px" />
 
 ### Calculate and report the mean and median of the total number of steps taken per day
 
@@ -138,7 +138,7 @@ with(dailyPattern, {
 })
 ```
 
-<img src="figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" width="750px" />
+<img src="figure/dailyPattern-1.png" title="plot of chunk dailyPattern" alt="plot of chunk dailyPattern" width="750px" />
 
 ### Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -190,7 +190,7 @@ dailyStepsFilled<-aggregate(steps ~ date, data=activityFilled, FUN = sum, na.rm=
 hist(dailyStepsFilled$steps,xlab="Daily Steps", main="Histogram of Total Daily Steps (Imputed Values")
 ```
 
-<img src="figure/unnamed-chunk-10-1.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" width="750px" />
+<img src="figure/imputedValuesHistogram-1.png" title="plot of chunk imputedValuesHistogram" alt="plot of chunk imputedValuesHistogram" width="750px" />
 
 ```r
 mean(dailyStepsFilled$steps)
@@ -241,6 +241,6 @@ with(weekendPattern, {
 })
 ```
 
-<img src="figure/unnamed-chunk-12-1.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="750px" />
+<img src="figure/weekdaysVersusWeekends-1.png" title="plot of chunk weekdaysVersusWeekends" alt="plot of chunk weekdaysVersusWeekends" width="750px" />
 
 It would seem that the number of steps peaks higher on weekdays that it does on weekends (in the morning) whereas the overall level tends to stay higher throughout the weekend days.
